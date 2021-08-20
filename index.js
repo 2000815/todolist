@@ -81,9 +81,9 @@ let cityName ='tokyo'
 var owmApiKey ="5a8421ab3c19a4d4cbd2fcf6903ac521";
 var owmURL = "http://api.openweathermap.org/data/2.5/weather?q="+ cityName +"&APPID="+ owmApiKey +"";
 
-request.open('GET', owmURL);
+request.open('GET', URL　, true);
 
-request.send();
+
 
 request.responseType = 'json';
 
@@ -96,7 +96,7 @@ request.onload = function () {
     }else if(messageElement = 'rain'){
         weatherMark.innerHTML="<img src='http://openweathermap.org/img/w/09d.png' >"
     }
-
+request.send();
 
 
 
